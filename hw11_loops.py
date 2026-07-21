@@ -33,7 +33,7 @@ for temperature in temperatures:
     if temperature >15:
         print("Тепло")
     elif 0 <= temperature <= 15:
-        print("Прохолдно")
+        print("Прохолодно")
     else:
         print("Морозно")
 
@@ -63,10 +63,12 @@ for word in words:
 # Вправа 8 — FizzBuzz повний варіант (класика). Числа від 1 до 30:
 
 for numb in range (1, 31):
-    if numb % 3 == 0:
-        print("Fizz")
+    if numb % 3 == 0 and numb % 5 == 0:
+        print("FizzBuzz") 
     elif numb % 5 == 0:
         print("Buzz")
+    elif numb % 3 == 0:
+        print("Fizz")
     else:
         print(numb)
 
@@ -75,8 +77,8 @@ for numb in range (1, 31):
 count = 0
 for x in range(1, 51):
     if x % 2 ==0:
-        count = x + 1
-        print(count)
+        count = count + 1
+print(count)
 
 # Вправа 10 — міні-задача. Створи attempts = 0 і password = "sunshine". Симулюй "спроби входу" — цикл while attempts < 3, кожен раз збільшуй attempts на 1 і виводь "Спроба входу №", attempts. Якщо attempts досягає 3 — вивести "Забагато спроб, доступ заблоковано".
 
@@ -87,3 +89,4 @@ while attempts <3:
     attempts = attempts + 1
     print("Спроба №", attempts)
 
+print("Забагато спроб, доступ заблоковано")
